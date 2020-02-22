@@ -1,0 +1,43 @@
+{
+  "name": "multi_url",
+  "version": "1.0.0",
+  "description": "Package to resolve multiple requests",
+  "main": "./src/index.ts",
+  "author": "bhargavrpanth@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "mock": "yarn build && node dist/tests/fixtures/server.js",
+    "test": "yarn build && IP=http://127.0.0.1 PORT=3000 ts-mocha --timeout 5000 --exit ./dist/tests/* --file ./dist/tests/fixtures/server.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "body-parser": "^1.19.0",
+    "expect.js": "^0.3.1",
+    "express": "^4.17.1",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.1",
+    "mocha": "^7.0.1",
+    "prettier": "^1.19.1",
+    "request": "^2.88.0",
+    "ts-mocha": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "request-promise": "^4.2.5",
+    "tsc": "^1.20150623.0"
+  }
+}
