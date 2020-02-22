@@ -2,7 +2,7 @@
   "name": "multi_url",
   "version": "1.0.0",
   "description": "Package to resolve multiple requests",
-  "main": "./src/index.ts",
+  "main": "./dist/src/index.js",
   "author": "bhargavrpanth@gmail.com",
   "license": "MIT",
   "private": false,
