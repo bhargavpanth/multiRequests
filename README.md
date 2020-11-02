@@ -1,5 +1,7 @@
 ## requestMultipleUrls
 
+[![NPM Status](https://img.shields.io/npm/dm/multi_url.svg?style=flat-square)](https://www.npmjs.com/package/multi_url)
+
 ### Usage
 ```
 import { requestMultipleUrls } from 'requestMultipleUrls'
